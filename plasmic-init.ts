@@ -1,4 +1,5 @@
 import { initPlasmicLoader } from "@plasmicapp/loader-nextjs";
+import FilteredCards from "./components/FilteredCards";
 
 export const PLASMIC = initPlasmicLoader({
   projects: [
@@ -22,4 +23,13 @@ export const PLASMIC = initPlasmicLoader({
 // http://localhost:3000/plasmic-host).  See
 // https://docs.plasmic.app/learn/app-hosting/#set-a-plasmic-project-to-use-your-app-host
 
-// PLASMIC.registerComponent(...);
+PLASMIC.registerComponent(FilteredCards, {
+  name: "FilteredCards",
+  props: {
+    cards: {
+      type: "array", // Définit le type de données
+      defaultValue: [],
+      description: "Données des cartes pour affichage",
+    },
+  },
+});
