@@ -1,5 +1,5 @@
 import { initPlasmicLoader } from "@plasmicapp/loader-nextjs";
-import FilteredCards from "./components/FilteredCards";
+import FilteredCards from './components/FilteredCards.js';
 
 export const PLASMIC = initPlasmicLoader({
   projects: [
